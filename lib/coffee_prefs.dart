@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:one/styled_body_text.dart';
+import 'package:one/styled_button.dart';
 
 class CoffeePrefs extends StatefulWidget {
   const CoffeePrefs({super.key});
@@ -37,11 +38,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
               colorBlendMode: BlendMode.multiply,
             ),
           const Expanded(child: SizedBox()),
-          FilledButton(
-              style: FilledButton.styleFrom(
-                  backgroundColor: Colors.brown, foregroundColor: Colors.white),
-              onPressed: increaseStrength,
-              child: const Text('+')),
+          StyledButton(onPressed: increaseStrength, child: const Text('+')),
         ]),
         Row(children: [
           const StyledBodyText('Sugars: '),
@@ -54,11 +51,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
               width: 25,
             ),
           const Expanded(child: SizedBox()),
-          FilledButton(
-              style: FilledButton.styleFrom(
-                  backgroundColor: Colors.brown, foregroundColor: Colors.white),
-              onPressed: increaseSugars,
-              child: const Text('+')),
+          StyledButton(onPressed: increaseSugars, child: const Text('+')),
         ])
       ],
     );
